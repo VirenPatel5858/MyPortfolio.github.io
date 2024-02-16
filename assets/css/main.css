@@ -4447,6 +4447,7 @@ input, select, textarea {
 		}
 
 			#copyright ul li {
+				color: #e89c0c;
 				border-left: solid 2px;
 				display: inline-block;
 				line-height: 1;
