@@ -30,8 +30,8 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a>Projects</a></li>
-							
+							<span data-tab-value="#projects"><li><a href ="#projects" class = "scrolly">Projects</a></li></span>
+							<span data-tab-value="#work-experience"><li><a href="#work-experience" class = "scrolly ">Work Experience</a></li> </span>
 						</ul>
 						<ul class="icons">
 							<li><a href="https://www.linkedin.com/in/virenpatel5858" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
@@ -49,15 +49,45 @@
 									<p> I am a passionate software enthusiast with a strong penchant for exploring and mastering new technologies. 
 										With a background in Computer Engineering, I am currently pursuing my Masters in Computer Science.
 										Throughout my academic journey, I have taken on diverse projects in Software Engineering, Data Analytics, Operating Systems, Machine Learning, and Artificial Intelligence, honing my skills and knowledge in these areas.
-										These experiences have shaped me into a versatile and skilled professional, fueled by curiosity for learning new technologies and making a commitment to deliver impactful solutions.
+										These experiences have shaped me into a versatile and skilled professional, fueled by a curiosity for learning new technologies and making a commitment to deliver impactful solutions.
 									</p>
 								</header>
-								<!-- <a href="#" class="image main"><img src="images/pic02.jpg" alt="" /></a> -->
 								<ul class="actions special">
-									<li><a href="#projects" class="button large solid solo scrolly">Check it out</a></li>
+									<li><a href="#work-experience" class="button large solid solo scrolly">Look at my Work Experience</a></li>
+									<li><a href="#projects" class="button large solid solo scrolly">Check out my Projects</a></li>
 								</ul>
 							</article>
 
+			
+						<!-- Work Experience -->
+						<section class="posts" id="work-experience">
+							<article>
+			
+								<a class="image fit"><img src="images/infosys.png" alt="" /></a>
+								<p><b>Position: System Engineer <br>
+									  Location: Pune, India <br>
+									  Date: 08/2021 - 07/2022
+									 </b></p>
+							 <p> I was entrusted with designing, constructing, and maintaining software solutions that revolved around creating and optimising
+								 digital experiences. The Adobe Experience Manager platform and the Java programming language were my tools of choice,
+								 allowing me to cultivate my innovative problem solving, and effective collaboration skills.
+								 </p>
+							 <p><b>Technology used: AEM, Java and Software Development Lifecycle</b></p>
+							</article>
+							<article>
+								<a class="image fit"><img src="images/tamucc.png" alt="" /></a>
+								<p><b> Position: ServiceNow Junior Developer <br>
+									   Location: Corpus Christi, Texas, USA <br>
+									   Date: 01/2023 -<i> Present </i>
+									    </b></p>
+								<p> I am working within the ServiceNow platform to enhance the customer experience and IT workflows in the ITSM, CSM, and
+									SPM modules. I focus on modifications to existing catalog items, incident forms and development of the CMDB assets and the
+									mobile agent application. This role enables me to actively engage in the development and enhancement of IT solutions.</p>
+								<p><b>Technology used: ServiceNow and Javascript</b></p>
+								
+							</article>			
+							</section>
+			
 						<!-- Posts -->
 							<section class="posts" id="projects">
 								<article>
@@ -139,10 +169,12 @@
 								
 							</section>
 
+					     </div>
+
 						<!-- Footer -->
 							
 
-					</div>
+					
 
 				<!-- Footer -->
 					<footer id="footer">
@@ -185,6 +217,24 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script type="text/javascript">
+       
+        // function to get each tab details
+        const tabs = document.querySelectorAll('[data-tab-value]')
+        const tabInfos = document.querySelectorAll('[data-tab-info]')
+ 
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = document
+                    .querySelector(tab.dataset.tabValue);
+                tabInfos.forEach(tabInfo => {
+                    tabInfo.classList.remove('active')
+                })
+                target.classList.add('active');
+            })
+        })
+    </script>
 
 	</body>
 </html>
